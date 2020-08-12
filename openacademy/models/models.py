@@ -11,7 +11,7 @@ class Course(models.Model):
      responsible_id = fields.Many2one(
         'res.users', string="Responsible", 
         index=True, ondelete='set null')
-    session_ids = fields.One2many('openacademy.session', 'course_id')
+     session_ids = fields.One2many('openacademy.session', 'course_id')
 
 class Session(models.Model):
     _name = 'openacademy.session'
